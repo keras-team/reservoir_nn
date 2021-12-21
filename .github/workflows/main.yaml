@@ -42,7 +42,7 @@ jobs:
 
     - name: Python Unit tests
       run: |
-        tox
+        tox4
 
     - name: Build Python sdist
       if: startsWith(github.ref, 'refs/tags') && matrix.deploy
