@@ -15,10 +15,6 @@ jobs:
   build:
     runs-on: ${{ matrix.os }}
 
-    defaults:
-      run:
-        shell: bash -l {0}   # for conda.
-
     strategy:
       fail-fast: false
       matrix:
