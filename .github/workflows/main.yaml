@@ -38,7 +38,7 @@ jobs:
 
     - name: Setup test env
       run: |
-        pip install tox
+        python -m pip install tox-gh
 
     - name: Python Unit tests
       run: |
