@@ -19,9 +19,9 @@ jobs:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest, macos-latest, windows-latest ]
-        python-version: [ 3.8 ]
+        python-version: [ 3.9 ]
         include:
-          - {deploy: true, os: ubuntu-latest, python-version: 3.8 }
+          - {deploy: true, os: ubuntu-latest, python-version: 3.9 }
     steps:
 
     - name: Checkout source code
