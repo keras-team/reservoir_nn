@@ -1,4 +1,4 @@
-# main test workflow; ported from .travis.yaml
+# main test workflow
 
 name: main
 
@@ -7,7 +7,7 @@ on:
     - cron:  '* * * * 5'   # Runs on every Friday.
   push:
     branches: [ '*', $default-branch ]
-    tags: ['[0-9]*']   # anything looks like a version.
+    tags: ['[.0-9]*']   # anything looks like a version.
   pull_request:
     branches: [ $default-branch ]
 
@@ -45,6 +45,7 @@ jobs:
       run: |
         python setup.py sdist
 
+    # TODO: Release to pypi.
     - name: Publish distribution to PyPI
       uses: pypa/gh-action-pypi-publish@master
       if: startsWith(github.ref, 'refs/tags') && matrix.deploy
