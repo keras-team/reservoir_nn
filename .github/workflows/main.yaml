@@ -7,7 +7,7 @@ on:
     - cron:  '* * * * 5'   # Runs on every Friday.
   push:
     branches: [ '*', $default-branch ]
-    tags: ['[.0-9]*']   # anything looks like a version.
+    tags: ['[0-9]*']   # anything looks like a version.
   pull_request:
     branches: [ $default-branch ]
 
